@@ -3,7 +3,17 @@
   text-align: center;
   justify-content: center;
 }
-
+/*
+CSS Personalizado
+Logo Prax*/
+.image--logo-top{
+  width: 195px;
+}
+.paragraph--frete-text{
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
 .container--shelfTitle {
   color: #727273;
   justify-content: center;
@@ -66,7 +76,10 @@
   font-size: 28px;
   font-weight: 700;
 }
-
+/* Personalizado */
+.container--frete-text{
+  height: 30px;
+}
 @media only screen and (min-width: 640px) {
   .container--question .strong {
     font-size: 40px;

@@ -7,7 +7,7 @@
   },
   "header-layout.desktop": {
     "children": [
-      "flex-layout.row#1-desktop",
+      // "flex-layout.row#1-desktop",
       "flex-layout.row#3-desktop",
       "sticky-layout#4-desktop"
     ]
@@ -23,16 +23,24 @@
   "flex-layout.row#3-desktop": {
     "props": {
       "blockClass": "menu-link",
-      "horizontalAlign": "center",
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true,
+      // "horizontalAlign": "center",
+      // "preventHorizontalStretch": true,
+      // "preventVerticalStretch": true,
       "fullWidth": true
     },
     "children": [
-      "vtex.menu@2.x:menu#websites",
-      "flex-layout.col#spacer",
-      "vtex.menu@2.x:menu#institutional"
+      // "vtex.menu@2.x:menu#websites",
+      // "flex-layout.col#spacer",
+      // "vtex.menu@2.x:menu#institutional"
+      "rich-text#top-bar"
     ]
+  },
+  "rich-text#top-bar": {
+    "props": {
+      "blockClass":"frete-text",
+      "text":"Frete grátis nas compras a partir de **R$ 500,00**",
+      "textPosition": "CENTER"
+    }
   },
   "flex-layout.col#spacer": {
     "props": {
@@ -55,35 +63,35 @@
       "fullWidth": true
     },
     "children": [
+      "flex-layout.col#spacer",
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#category-menu",
+      // "flex-layout.col#category-menu",
       "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
+      "flex-layout.col#spacer",
+      // "locale-switcher",
       "login",
-      "minicart.v2"
+      "minicart.v2",
+      "flex-layout.col#spacer"
     ]
   },
   "flex-layout.col#logo-desktop": {
     "props": {
       "verticalAlign": "middle"
     },
-    "children": ["logo#desktop"]
+    "children": ["rich-text#logoDesktop"]
+  },
+  "rich-text#logoDesktop": {
+    "props": {
+      "blockClass": ["logo-top"],
+      "text": "![logo](assets/img/logo.png)"
+    }
   },
   "flex-layout.col#category-menu": {
     "props": {
       "verticalAlign": "middle"
     },
     "children": ["vtex.menu@2.x:menu#category-menu"]
-  },
-  "logo#desktop": {
-    "props": {
-      "title": "Logo",
-      "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo.png",
-      "width": "180",
-      "height": "12"
-    }
   },
   "header-layout.mobile": {
     "children": ["sticky-layout#1-mobile"]
@@ -125,7 +133,7 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://storecomponents.vteximg.com.br/arquivos/store-theme-logo-mobile.png",
+      "url": "assets/img/logo.png",
       "width": "77.5",
       "height": "27.5"
     }
