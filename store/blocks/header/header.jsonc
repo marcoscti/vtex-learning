@@ -7,9 +7,8 @@
   },
   "header-layout.desktop": {
     "children": [
-      // "flex-layout.row#1-desktop",
-      "flex-layout.row#3-desktop",
-      "sticky-layout#4-desktop"
+      "sticky-layout#4-desktop",
+      "flex-layout.row#menu-desktop"
     ]
   },
 
@@ -19,7 +18,20 @@
       "fullWidth": true
     }
   },
-  
+  "flex-layout.row#menu-desktop": {
+    "props": {
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.col#menu-item"
+    ]
+  },
+  "flex-layout.col#menu-item": {
+    "props": {
+      "blockClass":"item",
+      "text": "teste"
+    }
+  },
   "flex-layout.row#3-desktop": {
     "props": {
       "blockClass": "menu-link",
@@ -51,7 +63,11 @@
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#4-desktop"]
+    "children": [
+      "flex-layout.row#3-desktop",
+      "flex-layout.row#4-desktop",
+      "flex-layout.row#menu-desktop"
+    ]
   },
   "flex-layout.row#4-desktop": {
     "props": {
@@ -65,11 +81,9 @@
     "children": [
       "flex-layout.col#spacer",
       "flex-layout.col#logo-desktop",
-      // "flex-layout.col#category-menu",
       "flex-layout.col#spacer",
       "search-bar",
       "flex-layout.col#spacer",
-      // "locale-switcher",
       "login",
       "minicart.v2",
       "flex-layout.col#spacer"
@@ -93,6 +107,7 @@
     },
     "children": ["vtex.menu@2.x:menu#category-menu"]
   },
+  //Mobile
   "header-layout.mobile": {
     "children": ["sticky-layout#1-mobile"]
   },

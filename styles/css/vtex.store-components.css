@@ -111,3 +111,25 @@
 .image {
   image-rendering: -webkit-optimize-contrast;
 }
+/* .searchBarContainer :global(.vtex-styleguide-9-x-input){
+  width: 460px;
+  border-radius: 15px;
+} */
+.searchBarInnerContainer{
+  border: none;
+  width: 500px;
+}
+.searchBarInnerContainer :global(.vtex-input-prefix__group) {
+  height: 30px;
+  border: 2px solid #26A885;
+  border-radius: 10px;
+}
+
+.searchBarInnerContainer
+:global(.vtex-input__suffix) {
+  /* display: none; */
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #26A885, #5AC5CE);
+  padding: 5px;
+  z-index: 91;
+}
